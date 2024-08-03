@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Email list container */
+#email-list {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Email item styling */
+.email-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email-item:last-child {
+  border-bottom: none;
+}
+
+/* Email summary styling */
+.email-summary {
+  flex: 1;
+}
+
+.email-summary strong {
+  color: #555;
+}
+
+.email-summary span {
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 70px; /* Ensures alignment */
+}
+
+/* Button styling */
+.email-summary button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.email-summary button:hover {
+  background-color: #0056b3;
+}
+
+/* Email content styling */
+#email-content {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#email-content h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+#email-content p {
+  margin: 10px 0;
+}
+
+/* Suggested response styling */
+#suggested-response {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#send-response-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#send-response-btn:hover {
+  background-color: #218838;
+}
