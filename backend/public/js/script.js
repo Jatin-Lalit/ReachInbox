@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to fetch and categorize emails
   async function fetchEmails() {
     try {
-      const response = await fetch("http://localhost:3000/api/emails");
+      const response = await fetch(
+        "https://reachinbox-qhse.onrender.com/api/emails"
+      );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -52,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to view email details
   window.viewEmail = async function (emailId) {
     try {
-      const response = await fetch(`http://localhost:3000/email/${emailId}`);
+      const response = await fetch(
+        `https://reachinbox-qhse.onrender.com/email/${emailId}`
+      );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -79,13 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to get response suggestion from OpenAI
   async function getSuggestion(emailContent) {
     try {
-      const response = await fetch("http://localhost:3000/suggest-response", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ content: emailContent }),
-      });
+      const response = await fetch(
+        "https://reachinbox-qhse.onrender.com/suggest-response",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ content: emailContent }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -101,16 +108,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to send response
   window.sendResponse = async function (email) {
     // Get suggested response
-    const suggestedResponse = document.getElementById("suggested-response").innerText;
+    const suggestedResponse =
+      document.getElementById("suggested-response").innerText;
 
     try {
-      const response = await fetch("http://localhost:3000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, response: suggestedResponse }),
-      });
+      const response = await fetch(
+        "https://reachinbox-qhse.onrender.com/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, response: suggestedResponse }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
