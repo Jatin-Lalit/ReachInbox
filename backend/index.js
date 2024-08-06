@@ -411,10 +411,10 @@ async function checkForNewEmails() {
 }
 
 // Set a timer to check for new emails every 1 minute
-setInterval(checkForNewEmails, 6000);
+// setInterval(checkForNewEmails, 6000);
 
-// Set interval to check for new emails every 5 minutes
-setInterval(checkForNewEmails, 5 * 60 * 1000);
+// // Set interval to check for new emails every 5 minutes
+// setInterval(checkForNewEmails, 5 * 60 * 1000);
 
 app.listen(3000, () => {
   console.log("Server started on http://localhost:3000");
